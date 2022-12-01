@@ -37,7 +37,6 @@ do
     echo "  '$line'," >> $data
 done < "$properInput"
 echo "];" >> $data
-echo "" >> $data
 echo "" > $properInput
 
 echo "Day $1 ready!"

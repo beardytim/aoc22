@@ -12,6 +12,7 @@ List<String> sampleInput = [
   '8000',
   '9000',
   '',
+  '10000',
 ];
 
 List<String> properInput = [
@@ -2267,5 +2268,5 @@ List<String> properInput = [
   '5649',
   '2533',
   '5321',
+  '1877',
 ];
-

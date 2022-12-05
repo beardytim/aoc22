@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setting vars"
+echo "Setting variables"
 day=day_$1
 main=days/$day.dart
 input=inputs/$day.dart
@@ -13,7 +13,8 @@ echo "Creating $main"
 echo "import '../$input';" >> $main
 echo "" >> $main
 echo "void main() {" >> $main
-echo "  List<String> input = sampleInput; // = properInput;" >> $main
+echo "  List<String> input = sampleInput;" >> $main
+echo "  // List<String> input = properInput;" >> $main
 echo "  " >> $main
 echo "  " >> $main
 echo "  " >> $main
@@ -34,10 +35,11 @@ do
 done < "$properInput"
 echo "];" >> $input
 
-echo "Reseting input files"
+echo "Resetting $sampleInput"
 rm $sampleInput
-rm $properInput
 touch $sampleInput
+echo "Resetting $properInput"
+rm $properInput
 touch $properInput
 
 echo "Opening $main"
